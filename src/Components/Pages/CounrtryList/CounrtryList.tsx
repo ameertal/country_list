@@ -13,7 +13,7 @@ function CounrtryList(): JSX.Element {
     setFiltertext(e.target.value);
   };
 
-  const filterCountries = countries.filter(function (el) {
+  const filterCountries = countries.filter((el) => {
     return (
       el.name.toLowerCase().includes(filtertext.toLowerCase()) ||
       el.capital?.toLowerCase().includes(filtertext.toLowerCase())
