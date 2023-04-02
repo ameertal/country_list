@@ -1,0 +1,67 @@
+.CounrtryList {}
+
+.CounrtryList .cards-display {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+}
+
+.CounrtryList .cards-display>* {
+    margin: 20px;
+}
+
+
+.CounrtryList table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+  }
+
+  .CounrtryList th, td {
+    padding: 12px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .CounrtryList thead th {
+    background-color: #f2f2f2;
+    color: #444;
+  }
+
+  .CounrtryList tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .CounrtryList tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+  }
+
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    tbody td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: inline-block;
+      width: 98%;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+  }
+
+  
+.CounrtryList img {
+    width: 80px;
+    height: 50px;
+}

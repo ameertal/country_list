@@ -1,0 +1,21 @@
+.CountryCard {
+    background-color: gray;
+    border: 2px solid black;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.CountryCard p {
+    font-size: 16px;
+}
+
+
+.CountryCard img {
+    width: 80px;
+    height: 50px;
+}

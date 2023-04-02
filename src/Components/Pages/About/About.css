@@ -1,0 +1,13 @@
+.About {
+    padding: 20px;
+}
+
+.About p {
+    font-weight: 400;
+    font-size: var(--font-medium);
+}
+
+.About p::first-letter {
+    font-size: var(--font-large);
+    color: var(--secondary-color);
+}

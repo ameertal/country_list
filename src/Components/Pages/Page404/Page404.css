@@ -1,0 +1,12 @@
+.Page404 {
+	
+}
+.notFound{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
