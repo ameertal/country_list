@@ -1,6 +1,6 @@
-.CounrtryList {}
+.CountryList {}
 
-.CounrtryList .cards-display {
+.CountryList .cards-display {
     background-color: yellow;
     display: flex;
     flex-direction: row;
@@ -9,12 +9,12 @@
     align-items: left;
 }
 
-.CounrtryList .cards-display>* {
+.CountryList .cards-display>* {
     margin: 20px;
 }
 
 
-.CounrtryList table {
+.CountryList table {
     border-collapse: collapse;
     width: 100%;
     max-width: 800px;
@@ -22,7 +22,7 @@
     font-size: 16px;
   }
 
-  .CounrtryList th, td {
+  .CountryList th, td {
     padding: 12px;
     text-align: right;
     border-bottom: 1px solid #ddd;
@@ -33,11 +33,11 @@
     color: #444;
   }
 
-  .CounrtryList tbody tr:nth-child(even) {
+  .CountryList tbody tr:nth-child(even) {
     background-color: #f2f2f2;
   }
 
-  .CounrtryList tbody td:before {
+  .CountryList tbody td:before {
     content: attr(data-label);
     font-weight: bold;
     display: inline-block;
@@ -61,7 +61,43 @@
   }
 
   
-.CounrtryList img {
+.CountryList img {
     width: 80px;
     height: 50px;
 }
+
+
+.CountryList .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.CountryList .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.CountryList .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.CountryList .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.CountryList .dropdown-content a:hover {background-color: #ddd;}
+
+.CountryList .dropdown:hover .dropdown-content {display: block;}
+
+.CountryList .dropdown:hover .dropbtn {background-color: #3e8e41;}
