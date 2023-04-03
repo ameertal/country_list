@@ -1,7 +1,7 @@
 .CountryList {}
 
 .CountryList .cards-display {
-    background-color: yellow;
+    background-color:aqua;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
