@@ -1,9 +1,10 @@
 import "./Page404.css";
+import img_404 from '../../../Assets/Images/404.jpg';
 
 function Page404(): JSX.Element {
     return (
         <div className="Page404">
-			<div className="notFound">Page Not Found</div>
+            <img src={img_404} alt="404" /> 
         </div>
     );
 }

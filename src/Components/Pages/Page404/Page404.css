@@ -1,12 +1,8 @@
-.Page404 {
-	
-}
-.notFound{
-    height: 400px;
-    width: 400px;
+img{
+    height: 500px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
 }

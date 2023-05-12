@@ -5,7 +5,26 @@ import axios from "axios";
 import CountryCard from "../../Shared/CountryCard/CountryCard";
 import { StringifyOptions } from "querystring";
 
+import { useDispatch, useSelector } from 'react-redux';
+import { setSearchTerm } from '../../../Redux/searchSlice';
+import type { RootState } from '../../../Redux/reducers';
+
 function CountryList(): JSX.Element {
+  //-----------------------------------------------------------------------
+  const [inputValue, setInputValue] = useState('');
+  const dispatch = useDispatch();
+  const searchTerm = useSelector((state: RootState) => state.search.searchTerm);
+  const searchResults = useSelector((state: RootState) => state.search.searchResults);
+
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+    setInputValue(value);
+    dispatch(setSearchTerm(value));
+  };
+
+
+  //-----------------------------------------------------------------------
   const countriesUrl = "https://restcountries.com/v2/all";
   const tableHeaders = ["Country", "Capital", "Population", "Flag"];
   const [countries, setCountries] = useState<CountryModel[]>([]);
@@ -20,6 +39,13 @@ function CountryList(): JSX.Element {
     return (
       el.name.toLowerCase().includes(filtertext.toLowerCase()) ||
       el.capital?.toLowerCase().includes(filtertext.toLowerCase())
+    );
+  });
+
+  const filterCstore = countries.filter((el) => {
+    return (
+      el.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      el.capital?.toLowerCase().includes(searchTerm.toLowerCase())
     );
   });
 
@@ -47,6 +73,8 @@ function CountryList(): JSX.Element {
 
   return (
     <div className="CountryList">
+      
+
       <span>Display results by: </span>
       <select value={display} onChange={handleChange1}>
         <option value="Table">Table</option>
@@ -68,7 +96,7 @@ function CountryList(): JSX.Element {
               </tr>
             </thead>
             <tbody>
-              {filterCountries.map((c) => (
+              {filterCstore.map((c) => (
                 <tr key={"country" + c.name}>
                   <td>{c.name} </td>
                   <td>{c.capital}</td>
