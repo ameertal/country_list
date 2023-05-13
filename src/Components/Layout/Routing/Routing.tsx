@@ -11,11 +11,11 @@ function Routing(): JSX.Element {
     <div className="Routing">
       <Routes>
         <Route path="/" element={<App />} />
-        <Route index element={<Home/>} />  
-        <Route path="home" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="countries" element={<CounrtryList />} /> 
-        <Route path="*" element={<Page404 />} />    
+          <Route index element={<Home/>} />  
+          <Route path="home" element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="countries" element={<CounrtryList />} /> 
+          <Route path="*" element={<Page404 />} />    
       </Routes>
     </div>
   );
